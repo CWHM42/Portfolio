@@ -1,0 +1,60 @@
+<!-- This recipePage.ejs file includes the partials files, header.ejs and footer.ejs. -->
+
+<%- include('partials/header') %>
+<div class="wrapper-recipepage">
+    <div class="recipe-grid">
+        <div class-="middle">
+            <p class="recipe-page-title"><%=RecipeInfo.title%></>
+
+            <div class="button-container"> 
+                <img class="large-img" src="<%=RecipeInfo.image%>" alt="food image">
+
+                <!-- "Save To Favorites" heart -->
+                <form class="inline-btn" action="/addToFavs" method="GET">
+                    <button class="heart" type="submit" name="id" value="<%=RecipeInfo.id %>"><i class="fa-solid fa-heart"></i></button>
+                </form>
+                <!-- <a href="/addToFavs">Favorites</a> -->
+            </div>
+            <p class="ready-in"><strong>Ready in: &nbsp;</strong><%=RecipeInfo.readyInMinutes%>&nbsp minutes!%>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Servings: </strong><%=RecipeInfo.servings%>
+            </p>
+
+            <!-- Nutrition info -->
+            <p class="nutrition"><strong>Nutrition (per serving):</strong></p>
+            <hr>
+            <div>
+                <div>
+                    <p>Calories:&nbsp;&nbsp;<%=nutriInfo.calories%></p>
+                </div>
+                <div>
+                    <p>Fat:&nbsp;&nbsp;<%=nutriInfo.fat%></p>
+                </div>
+                <div>
+                    <p>Carbs:&nbsp;&nbsp;<%=nutriInfo.carbs%></p>
+                </div>
+                <div>
+                    <p>Protein:&nbsp;&nbsp;<%=nutriInfo.protein%></p>
+                </div> 
+            </div>
+        </div>
+    
+        <div class="right">
+            <div class="ingr-div">
+                <p class="recipe-text-headers">Ingredients</p>
+                <hr>
+                <% for (let i=0; i<RecipeInfo.extendedIngredients.length; i++) { %>
+                    <ul>
+                        <li><%=RecipeInfo.extendedIngredients[i].original%></li> 
+                    </ul>
+                <% } %>
+            </div>
+            <div>
+                <p class="recipe-text-headers">Instructions</p>
+                <hr>
+                <p><%-RecipeInfo.instructions%></p>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>

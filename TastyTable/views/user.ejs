@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 mt-3">
+      <h4 class="user-name">User Name: <%= user.name %></h4>
+      <h4>Upload Profile Image:</h4>
+
+      <img src="image.jpg" alt="user" width="200" height="200">
+
+      <form
+        class="mt-4"
+        action="/users/upload"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        <div class="form-group">
+          <input
+            type="file"
+            name="myImage"
+            id="input-files"
+            class="form-control-file border"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="preview-images"></div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

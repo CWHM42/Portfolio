@@ -1,0 +1,271 @@
+.wrapper {
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+/* Search section */
+.search-section {
+    margin-bottom: 3em;
+}
+
+.user-greeting {
+    font-size: 1.7em;
+    margin-right: 1em;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 900;
+    margin-top: 3em;
+}
+
+.search-form {
+    display: inline;
+}
+
+/* Recipe grid section */
+.recipe-group {
+    margin-bottom: 2em;
+}
+
+.div-long-txt {
+    width: 290px;
+}
+
+.long {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.inline-btn {
+    display: inline;
+}
+
+/* Results page */
+.search-results {
+    color: #f0594f;
+    margin-bottom: 1.5em;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.7em;
+}
+
+.fav-recipes-txt {
+    /* also on Favorites page */
+    font-size: 1.7em;
+    margin-right: 1em;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+
+/* Favorites page */
+.search-button {
+    margin-bottom: 2em;
+}
+
+/* Recipe page */
+/* Using CSS Grid for recipe page layout. */
+.recipe-grid {
+    display: grid;
+    grid-template-areas:
+        "middle right";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 4em;
+    height: 100vh;
+    padding-top: 10pt;
+}
+
+.left-nav {
+    grid-area: nav;
+}
+
+.navlink-btn {
+    margin-bottom: 1em;
+}
+
+.middle {
+    grid-area: middle;
+    min-width: 200px;
+
+}
+
+.recipe-page-title {
+    font-size: 1.7em;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.large-img {
+    width: 100%;
+    height: 100%;
+}
+
+.ready-in {
+    margin-bottom: 2em;
+    margin-top: .5em;
+}
+
+.nutrition {
+    font-size: 1.2em;
+    margin-bottom: .75em;
+}
+
+.right {
+    grid-area: right;
+    margin-right: 0.5rem;
+}
+
+.ingr-div {
+    margin-bottom: 4em;
+}
+
+.recipe-text-headers {
+    font-size: 1.4em;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 900;
+
+
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.search-form {
+    padding-right: 50pt;
+}
+
+.nav-item {
+    padding-left: 60pt;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.nav-item dropdown {
+    color: white;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    gap: 1.5em;
+}
+
+.wrapper-recipepage {
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Heart Styling for Favorites*/
+
+.button-container {
+    display: inline-block;
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    bottom: -2.2em;
+    right: .4em;
+    background-color: #F0594f;
+    border-radius: 2em;
+    color: white;
+    padding: .2em .4em .1em .4em;
+    border: none;
+}
+
+.fa-heart {
+    font-size: 1em;
+}
+
+.trash {
+    position: absolute;
+    bottom: -2.2em;
+    right: 0;
+    background-color: #07163A;
+    /* border-radius:2em; */
+    color: white;
+    padding: .2em .5em .2em .5em;
+    border: none;
+}
+
+.fa-trash-can {
+    font-size: 1em;
+}
+
+
+.get-recipe {
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    background-color: #00000000;
+    color: #ffffff00;
+    padding: 7.6em 10.1em;
+    border: none;
+}
+
+.get-recipe:hover {
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    top: 0em;
+    right: 0em;
+    background-color: #00000050;
+    color: white;
+    padding: 3em 5.5em;
+    border: none;
+    font-size: 1.5em;
+}
+
+
+/* about page */
+.about-wrapper {
+    margin-left: 15em;
+    margin-right: 15em;
+
+}
+
+.about {
+    margin-top: 3em;
+    text-align: center;
+    width: auto;
+}
+
+.red {
+    color: #F0594f;
+}
+
+.about-tasty {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+.mission {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+.fav-greeting {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.nav-link:hover {
+    color: rgb(138, 136, 136);
+}
+
+.fa-magnifying-glass {
+    color: white;
+    margin-right: .5em;
+
+}
+
+.user-name {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}

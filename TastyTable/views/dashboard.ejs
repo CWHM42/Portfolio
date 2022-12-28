@@ -1,0 +1,52 @@
+<!-- This home.ejs file includes the partials files, header.ejs and footer.ejs. -->
+<%- include('partials/header') %>
+
+<div class="wrapper">
+
+    <div class="search-section">
+        <span class="user-greeting">Hello <%= user.name %>! What are we in the mood for?</span>
+
+        <!-- Search section --> 
+        <form class="search-form" action="/getSearchResults" method="GET">
+            <input type="search" name="searchQuery" placeholder="Search" value="">
+            <input type="submit">
+        </form>
+    </div>
+
+    <!-- Recipe grid-->
+    <div class="recipe-container">
+        <% for (let i=0; i<=15; i++){
+            /* <!-- if image doesn't exist, recipe won't render at all. This prevents a recipe with no photo from showing --> */
+            if (recipeInfo[i].image !== undefined) { %>
+                
+                <div class="recipe-group">
+                   
+                    <!-- Recipe name -->
+                    <div class="div-long-txt">
+                        <h5 class="long"><%= recipeInfo[i].title %></h5>
+                    </div>
+                   
+                    <div class="button-container"> 
+                        <img src="<%= recipeInfo[i].image %>" alt="food image" height="100%" width="100%">
+
+                        <!-- "Save To Favorites" heart -->
+                        <form class="inline-btn" action="/addToFavs" method="GET">
+                            <button class="heart" type="submit" name="id" value="<%=recipeInfo[i].id %>"><i class="fa-solid fa-heart"></i></button>
+                        </form>
+
+                        <!-- "Get Recipe" button -->
+                        <form class="inline-btn" action="/getRecipe" method="GET">
+                            <button class="get-recipe" type="submit" name="id" value="<%=recipeInfo[i].id %>">Get Recipe!</button>
+                        </form>
+
+                    </div>
+                        
+
+                </div>
+
+            <% }
+        } %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

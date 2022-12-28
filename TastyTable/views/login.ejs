@@ -1,0 +1,35 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-4 mt-3 mr-5" style="color: #07163a"><i class="fa-solid fa-pepper-hot fa-lg" style="color: #f0594f;"></i><strong> TastyTable</strong> </h1>
+      <h2 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h2>
+      <% include ('partials/messages') %>
+      <form action="/users/login" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+      <%- include ('pages/auth.ejs') %>
+      <p>Don't have an account?</p>
+      <span><a href="/users/register">Get a FREE account </a>|<a href="/users/recover-password"> Forgot my password</a></span>
+    </div>
+  </div>
+</div>
